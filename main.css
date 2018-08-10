@@ -1,0 +1,300 @@
+:root {
+    --main-color: #ffd93e;
+}
+
+html body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.wrapper {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+/* ---------------------------  HEADER  ------------------------------*/
+
+.header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 90px;
+    border-bottom: 1px solid lightgray;
+}
+
+.header a:link {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.header a:visited {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.header a:hover {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+.header a:active {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+.header > img {
+    position: relative;
+    left: 30px;
+    top: 26px;
+}
+
+.header-menu {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    line-height: 90px;
+    top: 2px;
+    left: 180px;
+}
+
+.header-menu  li {
+    padding: 0;
+    margin-right: 30px;
+    display: inline;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+
+/* ---------------------------  MAIN  ------------------------------*/
+
+.main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    font-size: 18px;
+    padding: 0 30px;
+}
+
+.main-data {
+    position: relative;
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.main-data > img {
+    width: 100%;
+    max-width: 630px;
+}
+
+.main-data > h2 {
+    position: absolute;
+    top: 55px;
+    left: 20px;
+}
+
+#main-info {
+    font-size: 14px;
+    position: absolute;
+    top: 100px;
+    left: 20px;
+}
+
+#where {
+    position: absolute;
+    top: 140px;
+    left: 20px;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+#temp {
+    position: absolute;
+    top: 150px;
+    left: 20px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+/* ---------------------------  MAIN-CONTROLS  -------------------- */
+
+.main-controls {
+    min-width: 300px;
+    max-width: 700px;
+}
+
+.scroll-arrows {
+    width: 18px;
+    height: 18px;
+    float: right;
+    margin-left: 10px;
+    opacity: 0.5;
+}
+
+.scroll-arrows:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.items {
+    clear: both;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: auto auto auto;
+    justify-content: space-between;
+    align-content: space-between;
+    height: 330px;
+}
+
+.item {
+    height: 100px;
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background-color .3s, box-shadow .3s;
+}
+
+.item:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+    cursor: pointer;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.item img {
+    display: block;
+    margin: 10px;
+}
+
+.item > p {
+    margin: 0 10px;
+    padding: 0;
+}
+
+/* ---------------------------  FAVORITES  -------------------- */
+
+.favorites {
+    margin: 0;
+    padding: 20px 30px;
+    max-width: 1300px;
+    width: 100%;
+}
+
+.favorites > p {
+    margin: 0;
+    margin-right: 10px;
+    padding: 0;
+    font-size: 16px;
+    float: left;
+}
+
+.favorites > ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+}
+
+.favorites-list-items {
+    display: inline;
+    margin: 0 10px;
+    padding: 5px 10px;
+    border-radius: 13px;
+    background-color: rgba(0, 0, 0, 0.04);
+}
+
+.favorites-list-items:hover {
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+/* ---------------------------  DEVICE-CARDS  -------------------- */
+
+.device-cards {
+    margin: 0;
+    padding: 0 30px;
+    width: 1300px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.device-card {
+    display: inline-block;
+    width: 200px;
+    height: 100px;
+    padding: 10px;
+    margin: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 20px;
+    white-space: normal;
+    transition: background-color .3s, box-shadow .3s;
+} 
+
+.device-card:first-child {
+    margin: 0;
+    margin-right: 15px;
+}
+
+.device-card:hover {
+    background-color: rgba(0, 0, 0, 0.01);
+    cursor: pointer;
+    box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.2);
+}
+
+.device-card p {
+    padding: 5px 0px;
+    margin: 0;
+}
+
+.device-name {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.device-status {
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+/* ---------------------------  FOOTER  -------------------- */
+
+.footer {
+    clear: both;
+    height: 60px;
+    font-size: 12px;
+}
+
+.footer > ul {
+    list-style-type: none;
+}
+
+.footer > ul > li {
+    display: inline;
+    color: rgba(0, 0, 0, 0.6);
+    margin-right: 30px;
+    line-height: 60px;
+}
+
+.footer a:link {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.footer a:visited {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
+
+.footer a:active {
+    color: rgba(0, 0, 0, 1);
+    text-decoration: none;
+}
