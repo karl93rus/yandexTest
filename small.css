@@ -1,0 +1,107 @@
+@media screen and (max-width: 480px) {
+    .header {
+        height: 100%;
+        position: relative;
+        padding-bottom: 6px;
+    }
+
+    #main-logo {
+        top: 6px;
+        left: 3%;
+    }
+
+    #burger {
+        display: inline-block;
+        position: absolute;
+        top: 18px;
+        left: 95%;
+    }
+
+    .header-menu {
+        display: none;
+        position: static;
+        margin: auto;
+        padding: 0 10%;
+        line-height: 35px;
+    }
+
+    .header-menu li {
+        display: inline;
+        margin: auto;
+        padding: 0 5%;
+        font-size: 18px;
+        
+    }
+
+/* -------------------------  MAIN  ------------------------------*/
+
+    .main {
+        display: block;
+        width: 95%;
+        padding: 3%;
+        margin: auto;
+    }
+
+    .main-data {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 10px 0;
+    }
+
+    #glavnoe {
+        display: none;
+    }
+
+    .main-data > img {
+        width: 100%;
+        max-width: 480px;
+    }
+
+    .main-data > h2 {
+        top: 1%;
+    }
+
+    #main-info {
+        top: 20%;
+    }
+
+    #where {
+        position: absolute;
+        top: 35%;
+        left: 20px;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    
+    #temp {
+        position: absolute;
+        top: 40%;
+        left: 20px;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    /* ------------------------  MAIN-CONTROLS  -------------------- */
+
+    .items {
+        display: inline-block;
+        white-space: nowrap;
+        height: 100%;
+        width: 100%;
+        overflow-x: hidden;
+        padding: 10px 0;
+    }
+
+    .item {
+        display: inline-block;
+        white-space: normal;
+    }
+
+    /* ---------------------------  FAVORITES  -------------------- */
+
+    .favorites {
+        width: 95%;
+    }
+
+}

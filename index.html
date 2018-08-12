@@ -2,13 +2,16 @@
 <html>
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="small.css">
     <title>Яндекс.Дом</title>
 </head>
 <body>
     <div class="wrapper">
         <div class="header">
-            <img src="fromya/logo.svg" alt="logo">
+            <img src="fromya/logo.svg" alt="logo" id="main-logo">
+            <img src="fromya/guide/assets/icon_list_m.png" alt="burger" id="burger">
             <ul class="header-menu">
                 <li><a href="#">Сводка</a></li>
                 <li><a href="#">Устройства</a></li>
@@ -17,7 +20,7 @@
         </div> <!-- header -->
         <div class="main">
             <div class="main-data">
-                <p>Главное</p>
+                <p id="glavnoe">Главное</p>
                 <img src="fromya/guide/assets/bg-1x.png" alt="main">
                 <h2>Привет, Геннадий!</h2>
                 <p id="main-info">Двери и окна закрыты, сигнализация включена.</p>
@@ -29,7 +32,6 @@
                     <a href="#"><img class="scroll-arrows" src="fromya/guide/assets/arrows_right.png" alt="right"></a>
                     <a href="#"><img class="scroll-arrows" src="fromya/guide/assets/arrows_left.png" alt="left"></a>
                 </p>
-                
                 <div class="items">
                     <div class="item">
                         <img src="fromya/guide/assets/icon_sun_1x.png" alt="sun">
