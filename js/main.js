@@ -1,14 +1,18 @@
-//---------------------------- VARIABLES SECTION
+//---------------------------- VARIABLES SECTION ----------------------------
 
 // buttons
 const devScrlLeft = document.getElementById("device-scroll-left");
 const devScrlRight = document.getElementById("device-scroll-right");
+const popupClose = document.getElementById("popup-close");
+const xiaomiCard = document.getElementById("xiaomi");
 
 // windows
 const deviceCards = document.getElementsByClassName("device-cards")[0];
+const popupWrapper = document.getElementsByClassName("popup-wrapper")[0];
+const popupControls = document.getElementsByClassName("popup-controls")[0];
 
 
-//---------------------------- FUNCTIONS SECTION
+//---------------------------- FUNCTIONS SECTION ----------------------------
 
 
 function scrollElement(element, offsetX) {
@@ -16,10 +20,11 @@ function scrollElement(element, offsetX) {
 }
 
 
-//---------------------------- EVENTS SECTION
+//---------------------------- EVENTS SECTION ----------------------------
 
 
 devScrlRight.addEventListener("click", () => {
+// Smooth scroll right
     let i = 0;
     let start = () => {
         if(i < 20) {
@@ -33,6 +38,7 @@ devScrlRight.addEventListener("click", () => {
 });
 
 devScrlLeft.addEventListener("click", () => {
+// Smooth scroll left
     let i = 0;
     let start = () => {
         if(i < 20) {
@@ -43,4 +49,16 @@ devScrlLeft.addEventListener("click", () => {
     };
 
     setTimeout(start, 10);
+});
+
+xiaomiCard.addEventListener("click", () => {
+    console.log(popupWrapper.className);
+    popupWrapper.classList.add("reveal");
+    console.log(popupWrapper.className);
+});
+
+popupClose.addEventListener("click", () => {
+    console.log(popupWrapper.className);
+    popupWrapper.classList.remove('reveal');
+    console.log(popupWrapper.className);
 });

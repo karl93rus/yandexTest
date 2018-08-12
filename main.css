@@ -1,5 +1,6 @@
 :root {
     --main-color: #ffd93e;
+    --popup-back: rgba(0, 0, 0, 0.6);
 }
 
 html, body {
@@ -148,7 +149,7 @@ html, body {
     clear: both;
     display: grid;
     grid-template-columns: auto auto auto;
-    grid-template-rows: auto auto auto;
+    grid-template-rows: 1fr 1fr 1fr;
     justify-content: space-between;
     align-content: space-between;
     height: 330px;
@@ -194,6 +195,10 @@ html, body {
     padding: 0;
     font-size: 16px;
     float: left;
+}
+
+.favorites > p > span {
+    display: none
 }
 
 .favorites > ul {
@@ -301,4 +306,116 @@ html, body {
 .footer a:active {
     color: rgba(0, 0, 0, 1);
     text-decoration: none;
+}
+
+/* ---------------------------  POPUP  -------------------- */
+
+.popup-wrapper {
+    display: none;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--popup-back);
+    z-index: 1;
+}
+
+.reveal {
+    display: block;
+}
+
+.popup-controls {
+    position: relative;
+    top: 20%;
+    left: 50%;
+    background-color: #fff;
+    margin-left: -315px;
+    width: 630px;
+    border-radius: 20px;
+    padding: 20px;
+}
+
+.popup-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.popup-name {
+    margin: 0;
+    padding: 0;
+}
+
+.popup-status {
+    margin: 0;
+    padding: 0;
+}
+
+.options {
+    margin: 25px 0 15px 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.option {
+    display: inline;
+    margin-right: 15px;
+    padding: 5px 15px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 13px;
+    transition: background-color .3s;
+}
+
+.option:hover {
+    background-color: var(--main-color);
+    cursor: pointer;
+}
+
+.popup-drag-ball {
+    margin:auto;
+    margin-top: 40px;
+    padding: 0;
+    width: 90%;
+    height: 50px;
+    background: linear-gradient(to right, #ffe682, #ff9e00);
+    border-radius: 25px;
+}
+
+.ball {
+    position: relative;
+    width: 50px;
+    height: 50px;
+    left: 50px;
+}
+
+.popup-buttons {
+    position: absolute;
+    left: 50%;
+    top: 350px;
+    margin-left: -315px;
+    margin-top: 20px;
+    padding: 0px;
+    width: 670px;
+}
+
+.popup-buttons > p:first-child {
+    margin-right: 10px;
+}
+
+.popup-button1 {
+    width: 330px;
+    margin: 0 0px;
+    padding: 20px 0;
+    text-align: center;
+    font-size: 20px;
+    background-color: #fff;
+    float: left;
+    border-radius: 20px;
+    transition: background-color .3s;
+}
+
+.popup-button1:hover {
+    background-color: var(--main-color);
+    cursor: pointer;
 }
